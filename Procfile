@@ -1,0 +1,1 @@
+web: gunicorn dailytadabbur.wsgi

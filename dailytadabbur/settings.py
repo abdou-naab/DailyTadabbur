@@ -52,6 +52,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "dailytadabbur.urls"
@@ -137,3 +139,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # allow access to ma api
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+import os
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
