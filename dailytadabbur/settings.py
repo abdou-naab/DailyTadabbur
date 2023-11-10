@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-yu)m%#56cl9v@=!1ors69m1b2*!k^*4tv-fu!+h8-_k0vg2#+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dailytadabbur.up.railway.app']
 
 AUTH_USER_MODEL = "base.User"
 # Application definition
